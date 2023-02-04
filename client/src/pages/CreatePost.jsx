@@ -15,11 +15,12 @@ const CreatePost = () => {
     const [generatingImg, setGeneratingImg] = useState(false)
     const [loading, setLoading] = useState(false)
 
+    
     const generateImage = async () => {
         if (form.prompt) {
             try {
                 setGeneratingImg(true)
-                const response = await fetch('http://localhost:8080/api/v1/imagen', {
+                const response = await fetch('https://imagen-2-0.onrender.com/api/v1/imagen', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
